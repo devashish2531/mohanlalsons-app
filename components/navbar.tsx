@@ -28,18 +28,20 @@ export default function Navbar() {
 
   return (
     <header className="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto  ">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <a
               href="#"
-              className="text-2xl font-bold text-foreground flex items-center"
+              className=" font-bold text-foreground flex items-center"
             >
               <span className="bg-gradient-to-r from-paint-red to-paint-blue w-10 h-10 rounded-md mr-3 flex items-center justify-center">
                 <Paintbrush size={24} className="text-white" />
               </span>
-              <span className="hidden sm:inline">Mohan Lal & Sons</span>
-              <span className="sm:hidden">Mohan Lal & Sons</span>
+              <span className="hidden sm:inline text-2xl">
+                Mohan Lal & Sons
+              </span>
+              <span className="sm:hidden text-xl">Mohan Lal & Sons</span>
             </a>
           </div>
 
@@ -87,22 +89,6 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center md:hidden space-x-4">
-            {mounted && (
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label="Toggle theme"
-                onClick={toggleTheme}
-                className="text-foreground"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </Button>
-            )}
-
             <button
               className="text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -147,7 +133,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md">
-          <div className="container mx-auto px-4 py-6">
+          <div className="container mx-auto  py-6">
             <nav className="flex flex-col space-y-6">
               <button
                 onClick={() => scrollToSection("home")}
@@ -173,6 +159,21 @@ export default function Navbar() {
               >
                 Contact
               </button>
+              {mounted && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  aria-label="Toggle theme"
+                  onClick={toggleTheme}
+                  className="text-foreground"
+                >
+                  {theme === "dark" ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                </Button>
+              )}
             </nav>
           </div>
         </div>

@@ -18,21 +18,26 @@ export default function HowItWorks() {
       description:
         "Implement AI-assisted execution of complex tasks, enabling faster, smarter operations with reduced training time and consistent quality.",
     },
-  ]
+  ];
 
   return (
     <section id="how-it-works" className="py-24 bg-muted">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-px w-8 bg-purple-500"></div>
-              <span className="text-purple-500 font-medium text-sm">THE PROCESS</span>
+              <span className="text-purple-500 font-medium text-sm">
+                THE PROCESS
+              </span>
               <div className="h-px w-8 bg-purple-500"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">How MindSync Works</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              How MindSync Works
+            </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Our three-step process transforms human expertise into scalable AI solutions
+              Our three-step process transforms human expertise into scalable AI
+              solutions
             </p>
           </div>
 
@@ -41,11 +46,17 @@ export default function HowItWorks() {
               <div key={index} className="relative">
                 <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="md:w-1/4 flex flex-col">
-                    <span className="text-5xl font-bold text-purple-500/30">{step.number}</span>
+                    <span className="text-5xl font-bold text-purple-500/30">
+                      {step.number}
+                    </span>
                   </div>
                   <div className="md:w-3/4">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
-                    <p className="text-foreground/70 text-lg leading-relaxed">{step.description}</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-foreground/70 text-lg leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
                 {index < steps.length - 1 && (
@@ -57,6 +68,5 @@ export default function HowItWorks() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
