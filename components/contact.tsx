@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto ">
+        <div className=" ">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-px w-8 bg-paint-blue"></div>
@@ -23,7 +23,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="grid md:grid-cols-2 gap-8 items-start max-w-full overflow-hidden">
             {/* Contact Information */}
             <div className="bg-gradient-to-br from-paint-blue/10 to-paint-purple/10 p-8 rounded-xl border border-paint-blue/20">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
@@ -36,6 +36,7 @@ export default function Contact() {
               </p>
 
               <div className="space-y-6">
+                {/* Phone */}
                 <div className="flex items-start gap-4">
                   <div className="bg-paint-blue/20 p-3 rounded-full">
                     <Phone className="h-6 w-6 text-paint-blue" />
@@ -48,32 +49,36 @@ export default function Contact() {
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start gap-4">
                   <div className="bg-paint-purple/20 p-3 rounded-full">
                     <Mail className="h-6 w-6 text-paint-purple" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-foreground">Email</h4>
                     <a
                       href="mailto:mohanlalsonspataudi@gmail.com"
-                      className="text-foreground/70"
+                      className="text-foreground/70 break-words overflow-wrap-break-word"
+                      style={{ wordBreak: "break-word" }}
                     >
                       mohanlalsonspataudi@gmail.com
                     </a>
                   </div>
                 </div>
 
+                {/* Address */}
                 <div className="flex items-start gap-4">
                   <div className="bg-paint-red/20 p-3 rounded-full">
                     <MapPin className="h-6 w-6 text-paint-red" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-semibold text-foreground">Address</h4>
                     <a
                       href="https://maps.app.goo.gl/fehSLhstiNpCFYPv6"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-foreground/70"
+                      className="text-foreground/70 break-words overflow-wrap-break-word"
+                      style={{ wordBreak: "break-word" }}
                     >
                       Main Market, Pataudi, Haryana, India
                     </a>
@@ -95,7 +100,7 @@ export default function Contact() {
             </div>
 
             {/* Google Maps */}
-            <div className="h-full min-h-[400px] rounded-xl overflow-hidden border border-border">
+            <div className="h-full  rounded-xl overflow-hidden border border-border max-w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.0374884602493!2d76.77640397591394!3d28.327467175832826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d4120123d8713%3A0x645ded0be9770652!2sMohan%20Lal%20%26%20Sons%20(ASIAN%20PAINTS%20Ezy%20Colour%20Store)!5e0!3m2!1sen!2sin!4v1726302878394!5m2!1sen!2sin"
                 width="100%"

@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/10">
-      <div className="container mx-auto  ">
+      <div className="container mx-auto px-6 ">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <a
@@ -39,9 +39,9 @@ export default function Navbar() {
                 <Paintbrush size={24} className="text-white" />
               </span>
               <span className="hidden sm:inline text-2xl">
-                Mohan Lal & Sons
+                Mohan Lal and Sons
               </span>
-              <span className="sm:hidden text-xl">Mohan Lal & Sons</span>
+              <span className="sm:hidden text-l">Mohan Lal and Sons</span>
             </a>
           </div>
 
@@ -159,21 +159,12 @@ export default function Navbar() {
               >
                 Contact
               </button>
-              {mounted && (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  aria-label="Toggle theme"
-                  onClick={toggleTheme}
-                  className="text-foreground"
-                >
-                  {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
-                  )}
-                </Button>
-              )}
+              <button
+                onClick={toggleTheme}
+                className="text-foreground/80 hover:text-foreground transition-colors py-2 text-left text-lg"
+              >
+                Theme
+              </button>
             </nav>
           </div>
         </div>
