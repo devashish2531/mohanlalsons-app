@@ -42,7 +42,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-foreground/70">+91 999 111 5565</p>
+                    <a href="tel:+919991115565" className="text-foreground/70">
+                      +91 999 111 5565
+                    </a>
                   </div>
                 </div>
 
@@ -52,9 +54,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-foreground/70">
+                    <a
+                      href="mailto:mohanlalsonspataudi@gmail.com"
+                      className="text-foreground/70"
+                    >
                       mohanlalsonspataudi@gmail.com
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -64,9 +69,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Address</h4>
-                    <p className="text-foreground/70">
+                    <a
+                      href="https://maps.app.goo.gl/fehSLhstiNpCFYPv6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-foreground/70"
+                    >
                       Main Market, Pataudi, Haryana, India
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -77,9 +87,9 @@ export default function Contact() {
                 </h4>
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="text-foreground/70">Monday - Saturday:</div>
-                  <div className="text-foreground">9:00 AM - 8:00 PM</div>
+                  <div className="text-foreground">8:00 AM - 8:00 PM</div>
                   <div className="text-foreground/70">Sunday:</div>
-                  <div className="text-foreground">10:00 AM - 4:00 PM</div>
+                  <div className="text-foreground">9:00 AM - 8:00 PM</div>
                 </div>
               </div>
             </div>

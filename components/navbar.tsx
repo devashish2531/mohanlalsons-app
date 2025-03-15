@@ -39,7 +39,7 @@ export default function Navbar() {
                 <Paintbrush size={24} className="text-white" />
               </span>
               <span className="hidden sm:inline">Mohan Lal & Sons</span>
-              <span className="sm:hidden">ML&S</span>
+              <span className="sm:hidden">Mohan Lal & Sons</span>
             </a>
           </div>
 

@@ -1,62 +1,79 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Gallery() {
   const images = [
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/img-01.jpeg",
       alt: "Interior painting project",
       caption: "Modern Living Room Transformation",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/img-02.jpeg",
+      alt: "Exterior painting project",
+      caption: "ASIAN PAINTS Ezy Colour Store",
+    },
+    {
+      src: "/img-03.jpeg",
       alt: "Exterior painting project",
       caption: "Vibrant Exterior Makeover",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/img-04.jpeg",
+      alt: "Exterior painting project",
+      caption: "Award Winning",
+    },
+    {
+      src: "/img-05.jpeg",
+      alt: "Exterior painting project",
+      caption: "Vibrant Exterior Makeover",
+    },
+    {
+      src: "/img-06.jpeg",
       alt: "Decorative painting",
       caption: "Artistic Wall Design",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/img-01.jpeg",
       alt: "Commercial painting project",
       caption: "Commercial Space Renovation",
     },
-  ]
+  ];
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout
+    let interval: NodeJS.Timeout;
 
     if (isAutoPlaying) {
       interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-      }, 5000)
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 5000);
     }
 
-    return () => clearInterval(interval)
-  }, [isAutoPlaying, images.length])
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, images.length]);
 
   const goToPrevious = () => {
-    setIsAutoPlaying(false)
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  }
+    setIsAutoPlaying(false);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
 
   const goToNext = () => {
-    setIsAutoPlaying(false)
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
+    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   const goToSlide = (index: number) => {
-    setIsAutoPlaying(false)
-    setCurrentIndex(index)
-  }
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
 
   return (
     <section id="gallery" className="py-24 bg-muted">
@@ -65,12 +82,17 @@ export default function Gallery() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="h-px w-8 bg-paint-purple"></div>
-              <span className="text-paint-purple font-medium text-sm">OUR WORK</span>
+              <span className="text-paint-purple font-medium text-sm">
+                OUR WORK
+              </span>
               <div className="h-px w-8 bg-paint-purple"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Project Gallery</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Gallery
+            </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Browse through our recent painting projects and get inspired for your next renovation
+              Browse through our recent painting projects and get inspired for
+              your next renovation
             </p>
           </div>
 
@@ -84,7 +106,9 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="text-2xl font-bold">{images[currentIndex].caption}</h3>
+                <h3 className="text-2xl font-bold">
+                  {images[currentIndex].caption}
+                </h3>
               </div>
             </div>
 
@@ -128,16 +152,21 @@ export default function Gallery() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`rounded-lg overflow-hidden border-2 transition-all ${
-                  currentIndex === index ? "border-paint-purple" : "border-transparent"
+                  currentIndex === index
+                    ? "border-paint-purple"
+                    : "border-transparent"
                 }`}
               >
-                <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-20 object-cover" />
+                <img
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  className="w-full h-20 object-cover"
+                />
               </button>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
