@@ -38,10 +38,8 @@ export default function Navbar() {
               <span className="bg-gradient-to-r from-paint-red to-paint-blue w-10 h-10 rounded-md mr-3 flex items-center justify-center">
                 <Paintbrush size={24} className="text-white" />
               </span>
-              <span className="hidden sm:inline text-2xl">
-                Mohan Lal and Sons
-              </span>
-              <span className="sm:hidden text-l">Mohan Lal and Sons</span>
+              <span className="hidden sm:inline text-2xl">Mohan Lal Sons</span>
+              <span className="sm:hidden text-l">Mohan Lal Sons</span>
             </a>
           </div>
 

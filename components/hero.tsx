@@ -29,7 +29,7 @@ export default function Hero() {
           <div className="flex items-center gap-2 mb-8">
             <div className="h-px w-12 bg-paint-red"></div>
             <span className="text-paint-red font-medium">
-              MOHAN LAL & SONS PAINT STORE
+              MOHAN LAL SONS PAINT STORE
             </span>
           </div>
 

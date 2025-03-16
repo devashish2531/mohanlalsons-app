@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Mohan Lal and Sons - Premium Paint Store in Pataudi",
+  title: "Mohan Lal Sons - Premium Paint Store in Pataudi",
   description:
     "Your one-stop destination for all your painting needs. We offer a wide range of Asian Paints products and services in Pataudi, Haryana.",
   generator: "v0.dev",

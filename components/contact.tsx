@@ -27,7 +27,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="bg-gradient-to-br from-paint-blue/10 to-paint-purple/10 p-8 rounded-xl border border-paint-blue/20">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
-                Mohan Lal & Sons
+                Mohan Lal Sons
               </h3>
               <p className="text-foreground/70 mb-8">
                 Your one-stop destination for all your painting needs in
@@ -108,7 +108,7 @@ export default function Contact() {
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
-                aria-label="Google Maps showing location of Mohan Lal and Sons Paint Store"
+                aria-label="Google Maps showing location of Mohan Lal Sons Paint Store"
               ></iframe>
             </div>
           </div>
