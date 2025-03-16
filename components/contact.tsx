@@ -80,7 +80,8 @@ export default function Contact() {
                       className="text-foreground/70 break-words overflow-wrap-break-word"
                       style={{ wordBreak: "break-word" }}
                     >
-                      Main Market, Pataudi, Haryana, India
+                      Shop No. 1, Amar Market, Main Market, Pataudi - 122503,
+                      Haryana
                     </a>
                   </div>
                 </div>
@@ -108,7 +109,7 @@ export default function Contact() {
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
-                aria-label="Google Maps showing location of Mohan Lal Sons Paint Store"
+                aria-label="Google Maps showing location of Mohan Lal Sons Paints Store"
               ></iframe>
             </div>
           </div>

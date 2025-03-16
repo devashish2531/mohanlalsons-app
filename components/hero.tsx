@@ -28,8 +28,8 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-2 mb-8">
             <div className="h-px w-12 bg-paint-red"></div>
-            <span className="text-paint-red font-medium">
-              MOHAN LAL SONS PAINT STORE
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-paint-red via-paint-purple to-paint-blue text-2xl md:text-3xl font-bold">
+              MOHAN LAL SONS PAINTS STORE
             </span>
           </div>
 
